@@ -9,6 +9,7 @@ import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.Vector;
 import java.util.function.BiFunction;
 import java.util.function.Function;
@@ -41,12 +42,16 @@ public class TestSort {
         }
     }
 
-    public static  void validateBSExist(BiFunction<List<Integer>, Integer, Boolean> function) {
+    static Random r = new Random();
+
+    public static void validateBSExist(BiFunction<List<Integer>, Integer, Boolean> function) {
         for (int i = 0; i < 10; i++) {
             List<Integer> list = generateList(10, 1);
             new BubbleSort<Integer>().apply(list);
-            Boolean apply = function.apply(list, 1);
-            log.error("result :" + apply);
+            int target = r.nextInt(10);
+            Boolean apply = function.apply(list, target);
+            log.error("BSExist : " + target);
+            log.error("Result :" + apply);
 
 
         }
