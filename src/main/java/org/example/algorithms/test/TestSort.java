@@ -3,14 +3,11 @@ package org.example.algorithms.test;
 import lombok.extern.slf4j.Slf4j;
 import org.example.algorithms.day02.BSExist;
 import org.example.algorithms.day02.BubbleSort;
-import org.example.algorithms.day02.InsertSort;
-import org.example.algorithms.day02.SelectSort;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import java.util.Vector;
 import java.util.function.BiFunction;
 import java.util.function.Function;
 
