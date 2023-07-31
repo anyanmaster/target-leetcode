@@ -3,6 +3,8 @@ package org.example.algorithms.test;
 import lombok.extern.slf4j.Slf4j;
 import org.example.algorithms.day02.BSExist;
 import org.example.algorithms.day02.BubbleSort;
+import org.example.algorithms.day02.InsertSort;
+import org.example.algorithms.day02.SelectSort;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -22,13 +24,19 @@ import java.util.function.Function;
 public class TestSort {
 
     @Test
-    public void main() {
+    public void testSort() {
 
-//        validateSort(new SelectSort<Integer>());
-//        validateSort(new BubbleSort<Integer>());
-        //  validateSort(new InsertSort<Integer>());
+        validateSort(new SelectSort<Integer>());
+        validateSort(new BubbleSort<Integer>());
+        validateSort(new InsertSort<Integer>());
+
+    }
+
+    @Test
+    public void testBSExist() {
         validateBSExist(new BSExist<>());
     }
+
 
     public static <T> void validateSort(Function<List<T>, List<T>> function) {
         for (int i = 0; i < 10; i++) {
