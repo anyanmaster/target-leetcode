@@ -7,13 +7,16 @@ import java.util.Random;
 
 /**
  * @author 杨泰宇
- * @ClassName TestLinkList.java
- * @Description
+ *
+ *
+ *
+ *
+ *
  * @createTime 2023/8/1
  */
 public class TestLinkList {
     public static void main(String[] args) {
-        // verifyReverseList(10, 10);
+        verifyReverseList(10, 10);
         verifyDeleteValue(10, 10, 10);
     }
 
