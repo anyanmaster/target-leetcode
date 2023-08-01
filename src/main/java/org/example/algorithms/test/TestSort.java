@@ -64,7 +64,6 @@ public class TestSort {
 
 
     private static List<Integer> generateList(int total, int range) {
-
         List<Integer> list = new ArrayList<>(total);
         for (int i = 0; i < total; i++) {
             list.add((int) (Math.random() * total * range));
@@ -76,12 +75,8 @@ public class TestSort {
     }
 
     private static List<Integer> generateList(int total) {
-
         return generateList(total, 10);
-
-
     }
-
 
     private static void validateList(List<Integer> list) {
 
