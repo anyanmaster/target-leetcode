@@ -6,10 +6,10 @@ package org.example.algorithms.day04;
  * @Description
  * @createTime 2023/8/1
  */
-public class Node<T> {
+public class SingleNode<T> {
 
     T value;
-    Node<T> next;
+    SingleNode<T> next;
 
     public T getValue() {
         return value;
@@ -19,11 +19,11 @@ public class Node<T> {
         this.value = value;
     }
 
-    public Node<T> getNext() {
+    public SingleNode<T> getNext() {
         return next;
     }
 
-    public void setNext(Node<T> next) {
+    public void setNext(SingleNode<T> next) {
         this.next = next;
     }
 }
