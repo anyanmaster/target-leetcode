@@ -38,22 +38,22 @@ public class TestSort {
     }
 
 
-    public static <T> void validateSort(Function<List<T>, List<T>> function) {
+    public static <T> void validateSort(Function<List<T>, List<T>> listFunction) {
         for (int i = 0; i < 10; i++) {
             List<Integer> list = generateList(10);
-            function.apply((List<T>) list);
+            List<T> apply = listFunction.apply((List<T>) list);
             printList(list);
             validateList(list);
         }
     }
 
-    static Random r = new Random();
+    static Random random = new Random();
 
     public static void validateBSExist(BiFunction<List<Integer>, Integer, Boolean> function) {
         for (int i = 0; i < 10; i++) {
             List<Integer> list = generateList(10, 1);
             new BubbleSort<Integer>().apply(list);
-            int target = r.nextInt(10);
+            int target = random.nextInt(10);
             Boolean apply = function.apply(list, target);
             log.error("BSExist : " + target);
             log.error("Result :" + apply);
@@ -66,7 +66,7 @@ public class TestSort {
     private static List<Integer> generateList(int total, int range) {
         List<Integer> list = new ArrayList<>(total);
         for (int i = 0; i < total; i++) {
-            list.add((int) (Math.random() * total * range));
+            list.add(random.nextInt(total * range));
         }
 
         return list;
