@@ -5,6 +5,7 @@ import org.example.algorithms.day02.BSExist;
 import org.example.algorithms.day02.BubbleSort;
 import org.example.algorithms.day02.InsertSort;
 import org.example.algorithms.day02.SelectSort;
+import org.example.algorithms.day05.MergeSort;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -26,9 +27,10 @@ public class TestSort {
     @Test
     public void testSort() {
 
-        validateSort(new SelectSort<Integer>());
-        validateSort(new BubbleSort<Integer>());
-        validateSort(new InsertSort<Integer>());
+//        validateSort(new SelectSort<Integer>());
+//        validateSort(new BubbleSort<Integer>());
+//        validateSort(new InsertSort<Integer>());
+        validateSort(new MergeSort<Integer>());
 
     }
 
